@@ -71,5 +71,9 @@ Automatically identify anatomical structures, organs, tissues, molecules, and ke
 		return json({ error: 'Unexpected response from API' }, { status: 500 });
 	}
 
-	return json({ html: content.text.trim() });
+	const raw = content.text.trim();
+	const match = raw.match(/^```html[^\n]*\n([\s\S]*?)```$/);
+	const html = match ? match[1].trim() : raw;
+
+	return json({ html });
 };
