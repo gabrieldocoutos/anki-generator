@@ -21,7 +21,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY });
 
 	const message = await client.messages.create({
-		model: 'claude-haiku-4-5-20251001',
+		model: 'claude-sonnet-4-6',
 		max_tokens: 1024,
 		system: `You are an Anki flashcard generator. Your ONLY job is to convert educational text into Anki cloze deletion cards following strict formatting rules.
 
