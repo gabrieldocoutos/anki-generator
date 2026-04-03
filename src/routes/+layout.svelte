@@ -9,13 +9,8 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50">
-	<header class="bg-white/70 backdrop-blur-sm border-b border-pink-100">
-		<div class="max-w-2xl mx-auto px-4 py-5 text-center">
-			<h1 class="text-2xl font-bold text-rose-400 tracking-tight">Anki Generator</h1>
-		</div>
-	</header>
-	<main class="max-w-2xl mx-auto px-4 py-10">
+<div class="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-fuchsia-100">
+	<main class="max-w-xl mx-auto px-6 py-14">
 		{@render children()}
 	</main>
 </div>
