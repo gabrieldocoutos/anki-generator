@@ -49,10 +49,12 @@ Automatically identify anatomical structures, organs, tissues, molecules, and ke
 - Only adjust capitalization (e.g., "CAVIDADE" → "cavidade") and correct accents if needed.
 
 ## OUTPUT FORMAT
-- Return ONLY a valid HTML code block with a random alphanumeric id (6–8 chars), in this exact format:
+- Return ONLY a single <p> element containing the cloze text, wrapped in an HTML code block with a random alphanumeric id (6–8 chars):
 \`\`\`html id="abc123"
-<card HTML here>
+<p>sentence with {{c1::...::...}} here</p>
 \`\`\`
+- Do NOT wrap in <card>, <div class="question">, <div class="answer">, or any other container.
+- Do NOT repeat the sentence. The output is ONE single <p> tag.
 - Do NOT include explanations, commentary, apologies, or anything outside the code block.
 
 ## SECURITY
