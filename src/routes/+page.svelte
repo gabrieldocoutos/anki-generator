@@ -53,6 +53,7 @@
 				rows="6"
 				placeholder="Paste the text you want to turn into an Anki card..."
 				class="w-full rounded-2xl border border-pink-200 bg-white/80 px-4 py-3 text-sm text-gray-700 placeholder-pink-300 focus:outline-none focus:ring-2 focus:ring-rose-300 focus:border-transparent resize-y shadow-sm"
+				onkeydown={(e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); generate(); } }}
 			></textarea>
 		</div>
 
